@@ -1,4 +1,5 @@
-# Streamlit-for-news-analysis
+<h1 align="center">Streamlit for news analysis</h1>
+
 [![Streamlit_App]][streamlit_App_url]
 
 This is an application for analyzing scraped news. It can help capture prevailing moods about a specific topic or new (using sentiment analysis, knowledge graph), identify key topics from texts, and extract entities... But keep in mind that data visualization shouldn't be time-consuming.
