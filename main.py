@@ -21,14 +21,12 @@ def get_args():
         action="store_true",
         default=False,
     )
-
     parser.add_argument(
         "--web_app",
         help="Display streamlit web page.",
         action="store_true",
         default=False,
     )
-
     args = parser.parse_args()
     return args
 

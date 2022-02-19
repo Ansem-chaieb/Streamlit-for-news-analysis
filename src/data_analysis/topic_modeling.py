@@ -6,7 +6,7 @@ from gensim.utils import simple_preprocess
 from gensim.models import CoherenceModel, Phrases, phrases, ldamodel
 
 import pyLDAvis
-import pyLDAvis.gensim
+#import pyLDAvis.gensim
 
 
 class LatentDirichletAllocation:

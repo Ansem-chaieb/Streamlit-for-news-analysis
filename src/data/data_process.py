@@ -5,8 +5,11 @@ import string
 import inflect
 
 import spacy
+import nltk
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
+
 
 wordnet_lemmatizer = WordNetLemmatizer()
 stop_words = stopwords.words('english')
