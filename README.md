@@ -3,7 +3,7 @@
 [![Streamlit_App]][streamlit_App_url]
 
 This is an application for analyzing scraped news. It can help capture prevailing moods about a specific topic or new (using sentiment analysis, knowledge graph), identify key topics from texts, and extract entities... But keep in mind that data visualization shouldn't be time-consuming.
-
+    
 ## Instructions
 **1 . Clone the repository:**
 ```bash
@@ -24,12 +24,12 @@ git clone https://github.com/thunlp/OpenNRE.git
 
   The command comes with 3 flags:
   
-  **--scrape:**  Scrape https://www.bbc.co.uk/news/science-environment-56837908 for all the news 
+--scrape:  Scrape https://www.bbc.co.uk/news/science-environment-56837908 for all the news 
 links. Include link, author, date, subject, text, and images. 
   
-  **--preprocess:**  Process collected data.
-  
-  **--web_app:**  Display streamlit web page.
+--preprocess:  Process collected data.
+
+--web_app:  Display streamlit web page.
   
   
   <!-- MARKDOWN LINKS & IMAGES -->
