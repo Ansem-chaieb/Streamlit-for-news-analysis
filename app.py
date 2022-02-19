@@ -29,37 +29,17 @@ from utils import (
 nlp = spacy.load("en_core_web_sm")
 st.set_page_config(layout="wide")
 
-col1, col2 = st.columns(2)
-
-with col1:
-    st.write("1. Scrape  https://www.bbc.co.uk/news/science-environment-56837908  for all the news links. Include "
-             "link, author, date, subject, text, and images. Make sure to introduce human delay. Put the data in a "
-             "nice format. \n "
-             "2. Create a web-based application  including a dynamic graph ( knowledge graph if you can) that is "
-             "adjustable on the date of the data you collected. The graph should show sentiment analysis of articles "
-             "over time and named-entities associated.there should be drop down menus to "
-             "select different categories or NERs or whatever you decide. \n"
-             "3. Recommend a few papers that are doing something interesting related to "
-             "what you have achieved and how you would go about implementing them. \n")
-
-    st.write("**Bonus point 1:** When you click on a named entity, category, or your choice of insight, "
-             "you should get descriptions associated to that NER, etc.")
-    st.write("**Bonus point 2:**  Implementing one of the "
-             "methodologies of the papers you have recommended. ")
-
-with col2:
-    news = Image.open("images/news.jpg")
-    st.image(news)
+news = Image.open("images/data_analysis.png")
+st.image(news)
 
 # =================================================================================== #
 #                                Sidebar                                              #
 # =================================================================================== #
-ds = Image.open("images/deepsearch.png")
+ds = Image.open("images/news.jpg")
 st.sidebar.image(ds)
-st.sidebar.title("DeepSearch Labs Test:")
-st.sidebar.markdown("BBC News: Climate news analysis.")
+st.sidebar.title("BBC News: Climate news analysis:")
 
-st.sidebar.title("Navigation:")
+st.sidebar.markdown("Navigation:")
 dataset = st.sidebar.checkbox("Display Dataset")
 viz = st.sidebar.checkbox("Visualisation")
 if viz:
