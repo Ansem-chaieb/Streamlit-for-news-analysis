@@ -29,8 +29,7 @@ from utils import (
 nlp = spacy.load("en_core_web_sm")
 st.set_page_config(layout="wide")
 
-news = Image.open("images/data_analysis.png")
-st.image(news)
+st.title("Streamlit News Analysis")
 
 # =================================================================================== #
 #                                Sidebar                                              #
@@ -40,7 +39,7 @@ st.sidebar.image(ds)
 st.sidebar.title("BBC News: Climate news analysis:")
 
 st.sidebar.markdown("Navigation:")
-dataset = st.sidebar.checkbox("Display Dataset")
+
 viz = st.sidebar.checkbox("Visualisation")
 if viz:
     type = st.sidebar.radio("information type:", ("General", "Detailed"))
@@ -52,31 +51,31 @@ if viz:
 # =================================================================================== #
 data = pd.read_csv("dataset/process_data.csv")
 df = data_process(data)
-if dataset:
-    col1, col2 = st.columns(2)
-    with col1:
-        bbc = Image.open("images/bbc.png")
-        st.image(bbc)
-    with col2:
-        st.header("Climate BBC news ")
-    st.dataframe(
+
+col1, col2 = st.columns(2)
+with col1:
+    bbc = Image.open("images/bbc.png")
+    st.image(bbc)
+with col2:
+    st.header("Climate BBC news ")
+st.dataframe(
         data[["link", "author", "date", "text", "images", "subject"]]
     )
-    with st.expander("General informations:"):
-        st.write(
+with st.expander("General informations:"):
+    st.write(
             """
             This dataset includes approximately 700 climate-related articles retrieved from
              BBC news website on **12/22/2021**.
         """
         )
-        col3, col4 = st.columns(2)
-        with col3:
-            month_data = df.month.value_counts().rename_axis('month').reset_index(name='number_of_articles')
-            fig = px.bar(month_data,
+    col3, col4 = st.columns(2)
+    with col3:
+        month_data = df.month.value_counts().rename_axis('month').reset_index(name='number_of_articles')
+        fig = px.bar(month_data,
                          x="month",
                          y="number_of_articles",
                          )
-            fig.update_layout(
+        fig.update_layout(
                 title={
                     "text": "Number_of_articles per months",
                     "x": 0.5,
@@ -84,17 +83,17 @@ if dataset:
                     "yanchor": "top",
                 }
             )
-            st.plotly_chart(fig)
-        with col4:
-            author = feature_extraction(df)
-            fig = px.bar(
+        st.plotly_chart(fig)
+    with col4:
+        author = feature_extraction(df)
+        fig = px.bar(
                 author[author["Article_count"] > 5].sort_values(
                     ["Article_count"], ascending=False
                 ),
                 x="Author",
                 y="Article_count",
             )
-            fig.update_layout(
+        fig.update_layout(
                 title={
                     "text": "Top 14 authors in climate bbc news for 2021",
                     "x": 0.5,
@@ -102,7 +101,7 @@ if dataset:
                     "yanchor": "top",
                 }
             )
-            st.plotly_chart(fig)
+        st.plotly_chart(fig)
 
 
 # =================================================================================== #
