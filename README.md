@@ -1,4 +1,4 @@
-<h1 align="center">Streamlit for news analysis</h1>
+<h1 align="center">Streamlit For News Analysis</h1>
 
 [![Streamlit_App]][streamlit_App_url]
 
@@ -10,7 +10,6 @@ This is an application for analyzing scraped news. It can help capture prevailin
 https://github.com/Ansem-chaieb/Streamlit-for-news-analysis.git
 cd Streamlit-for-news-analysis/
 pip3 install -r requirements.txt
-git clone https://github.com/thunlp/OpenNRE.git
 ```
 If you want to try out the jupyter notebook for knowledge graphs, you should clone this fascinating project:
 ```
