@@ -1,28 +1,30 @@
-# DeepSearch-Labs-Test
+# Streamlit-for-news-analysis
 [![Streamlit_App]][streamlit_App_url]
 
-**1.** Scrape https://www.bbc.co.uk/news/science-environment-56837908 for all the news 
-links. Include link, author, date, subject, text, and images. Make sure to introduce human delay. Put the data in a nice format.
-
-
+This is a simple application for analyzing scraped news. It can help capture prevailing moods about a specific topic or new (using sentiment analysis, knowledge graph), identify key topics from texts, and extract entities... but keep in mind that data visualization shouldn't be time-consuming.
 
 ## Instructions
 **1 . Clone the repository:**
 ```bash
-git clone https://github.com/Ansem-chaieb/DeepSearch-Labs-.git
-cd DeepSearch-Labs-/
+https://github.com/Ansem-chaieb/Streamlit-for-news-analysis.git
+cd Streamlit-for-news-analysis/
 pip3 install -r requirements.txt
 git clone https://github.com/thunlp/OpenNRE.git
 ```
+If you want to try out the jupyter notebook for knowledge graphs, you should clone this fascinating project:
+```
+git clone https://github.com/thunlp/OpenNRE.git
+```
 
-#### Run project
+**2 . Run project**
  ```bash
   python3 main.py --scrape --preprocess --web_app
   ```
 
   The command comes with 3 flags:
   
-  **--scrape:**  Scrape climate bbc data. 
+  **--scrape:**  Scrape https://www.bbc.co.uk/news/science-environment-56837908 for all the news 
+links. Include link, author, date, subject, text, and images. 
   
   **--preprocess:**  Process collected data.
   
