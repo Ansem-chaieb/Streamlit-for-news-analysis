@@ -3,7 +3,11 @@
 [![Streamlit_App]][streamlit_App_url]
 
 This is an application for analyzing scraped news. It can help capture prevailing moods about a specific topic or new (using sentiment analysis, knowledge graph), identify key topics from texts, and extract entities... But keep in mind that data visualization shouldn't be time-consuming.
-    
+
+
+<p align="center"><img src ="https://github.com/Ansem-chaieb/Streamlit-for-news-analysis/blob/main/images/bbc.gif" alt = "Bassmalah" class="center"></p>
+  
+
 ## Instructions
 **1 . Clone the repository:**
 ```bash
