@@ -1,8 +1,8 @@
-<h1 align="center">Streamlit For News Analysis</h1>
+<h1 align="center">News Dashboard - Analyzing the world in real-time</h1>
 
 [![Streamlit_App]][streamlit_App_url]
 
-This is an application for analyzing scraped news. It can help capture prevailing moods about a specific topic or new (using sentiment analysis, knowledge graph), identify key topics from texts, and extract entities... But keep in mind that data visualization shouldn't be time-consuming.
+BBC News Dashboard - Analyzing the world in real-time, is a web-based application that provides users with up-to-date news and analysis from around the world. The dashboard gathers information from the BBC News website , and performs sentiment analysis, entity recognition, and topic modeling on the text. The results are displayed on an interactive dashboard that allows users to explore the news in different ways, such as by sentiment, topic, or entity.
 
 
 <p align="center"><img src ="https://github.com/Ansem-chaieb/Streamlit-for-news-analysis/blob/main/images/bbc.gif" alt = "Bassmalah" class="center"></p>
